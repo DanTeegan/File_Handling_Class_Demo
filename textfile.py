@@ -50,3 +50,16 @@ class Text_file_handling:
             self.text_storage=file.read()
             return self.text_storage
 
+    def playing_with_python_OSmodule(self):
+        import os # Here we need to import the module os
+        print(os.getcwd()) # Checking the current working directory
+        # os.remove("writer.txt") # This will remove the file writer.txt
+        print(os.listdir()) # Lists the files and directories
+        # os.rename("order.txt", "modified") # Changes the name of the file
+        os.chdir("C:/Users/dante/PycharmProjects/File_Handling_Class_Demo") # Changing the directory. Remember to change the direction of slashs
+        print(os.getcwd()) # current working directory/ Checking to see if our directory change was sucessful
+        # flags = os.O_RDWR
+        # os.open("modified.txt", flags)
+        os.mkdir("Daniel") # Creates a folder in the chosen directory
+        os.rmdir("Daniel") # Removes the folder from the directory
+

@@ -20,5 +20,6 @@ textfileobject = Text_file_handling(file_path)
 #
 # print(textfileobject.read_text_file_using_with())
 
-print(textfileobject.write_text_file_using_with())
+# print(textfileobject.write_text_file_using_with())
 
+textfileobject.playing_with_python_OSmodule()
