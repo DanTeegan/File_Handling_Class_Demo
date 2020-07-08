@@ -9,18 +9,25 @@ class Text_file_handling:
     def read_text_file(self):
         # Open file
         # Read the file
-        # Close the file
-        file = open(self.file_path, "r")
-        # self.text_storage=file.read()
-        # self.text_storage=file.read(3) # Reads 3 characters in the text file
-        # print(file.read(29)) # Prints the amount of characters you would like
-        self.text_storage = file.readline()
-        self.text_storage = file.readline()
-        self.text_storage = file.readlines()
-        # Here we are closing the file
-        file.seek(3) # Telling the pointer to go back to the particular position mentioned
-        file.close()
-        return self.text_storage
+        # Close the file#
+        # try:
+        #     file = open(self.file_path, "r")
+        # except Exception as e: # Except is catching the execption
+        #     print(e)
+        # else:
+            # self.text_storage=file.read()
+            # self.text_storage=file.read(3) # Reads 3 characters in the text file
+            # print(file.read(29)) # Prints the amount of characters you would like
+            # self.text_storage = file.readline()
+            # self.text_storage = file.readline()
+            # self.text_storage = file.readlines()
+            # # Here we are closing the file
+        #     file.seek(3) # Telling the pointer to go back to the particular position mentioned
+        #     file.close()
+        #     return self.text_storage
+        # finally: # Finally means it will always run irrespective wheather an eception is thrown or not
+        #     file.close()
+        #     print("Always run")
         pass
 
     def write_text_file(self):
@@ -63,3 +70,15 @@ class Text_file_handling:
         os.mkdir("Daniel") # Creates a folder in the chosen directory
         os.rmdir("Daniel") # Removes the folder from the directory
 
+    def playing_with_exception(self):
+        try:
+            file=open(self.file_path, "r")
+        except Exception as e:
+            print(e)
+            print("File is not avaiable bro")
+        else:
+            self.text_storage=file.readline()
+            file.close()
+        finally:
+            print("Will run for sure!!!")
+            return self.text_storage
