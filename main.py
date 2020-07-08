@@ -24,7 +24,9 @@ textfileobject = Text_file_handling(file_path)
 
 # textfileobject.playing_with_python_OSmodule()
 
-print(textfileobject.playing_with_exception())
+# print(textfileobject.playing_with_exception())
+
+textfileobject.raise_exception()
 
 
 #try-put the code which you think will raise an exception

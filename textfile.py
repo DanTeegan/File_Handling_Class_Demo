@@ -73,8 +73,14 @@ class Text_file_handling:
     def playing_with_exception(self):
         try:
             file=open(self.file_path, "r")
-        except Exception as e:
+
+            a = 10
+            b = 0
+            a / b
+
+        except FileNotFoundError as e: # Never write generalized exception class before the specific exception
             print(e)
+        except Exception as e:
             print("File is not avaiable bro")
         else:
             self.text_storage=file.readline()
@@ -82,3 +88,15 @@ class Text_file_handling:
         finally:
             print("Will run for sure!!!")
             return self.text_storage
+
+
+    def raise_exception(self):
+        try:
+            first_value = (input("Enter your name"))
+
+            if(len(first_value))==0:
+                raise Exception # You are throing an Exception which Python might not have
+        except Exception:
+            print("We do not accept empty names!!")
+        else:
+            print("Thank you for enetering your name", first_value)
