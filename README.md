@@ -1,0 +1,11 @@
+### Welcome, in this repositoy you can find
+- os module, How we can check current DIR and change location name
+- Reading and writing text files with open and close
+- close() closes the files closes() return Boolean
+- Find details with pointer? method and seek(0) get info with given instructions
+- File open, Ensure to close() with open() will close file automatically
+- How to use debugging - break points
+- Error and Exception handling - try, except, else, finally
+- raise our own exception - raise exception
+- Overring, Deleting, writing permissions and methods
+- ultiple exception should be put first and the last one should be the base

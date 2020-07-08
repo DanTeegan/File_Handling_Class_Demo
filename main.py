@@ -26,7 +26,10 @@ textfileobject = Text_file_handling(file_path)
 
 # print(textfileobject.playing_with_exception())
 
-textfileobject.raise_exception()
+# textfileobject.raise_exception()
+
+from task import Homework
+textfileobject.raise_exception_task()
 
 
 #try-put the code which you think will raise an exception

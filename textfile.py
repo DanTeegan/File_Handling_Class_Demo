@@ -10,24 +10,24 @@ class Text_file_handling:
         # Open file
         # Read the file
         # Close the file#
-        # try:
-        #     file = open(self.file_path, "r")
-        # except Exception as e: # Except is catching the execption
-        #     print(e)
-        # else:
-            # self.text_storage=file.read()
-            # self.text_storage=file.read(3) # Reads 3 characters in the text file
-            # print(file.read(29)) # Prints the amount of characters you would like
-            # self.text_storage = file.readline()
-            # self.text_storage = file.readline()
-            # self.text_storage = file.readlines()
-            # # Here we are closing the file
-        #     file.seek(3) # Telling the pointer to go back to the particular position mentioned
-        #     file.close()
-        #     return self.text_storage
-        # finally: # Finally means it will always run irrespective wheather an eception is thrown or not
-        #     file.close()
-        #     print("Always run")
+        try:
+            file = open(self.file_path, "r")
+        except Exception as e: # Except is catching the execption
+            print(e)
+        else:
+            self.text_storage=file.read()
+            self.text_storage=file.read(3) # Reads 3 characters in the text file
+            print(file.read(29)) # Prints the amount of characters you would like
+            self.text_storage = file.readline()
+            self.text_storage = file.readline()
+            self.text_storage = file.readlines()
+            # Here we are closing the file
+            file.seek(3) # Telling the pointer to go back to the particular position mentioned
+            file.close()
+            return self.text_storage
+        finally: # Finally means it will always run irrespective wheather an eception is thrown or not
+            file.close()
+            print("Always run")
         pass
 
     def write_text_file(self):
@@ -95,8 +95,38 @@ class Text_file_handling:
             first_value = (input("Enter your name"))
 
             if(len(first_value))==0:
-                raise Exception # You are throing an Exception which Python might not have
+                raise Exception # You are throwing an Exception which Python might not have
         except Exception:
             print("We do not accept empty names!!")
         else:
             print("Thank you for enetering your name", first_value)
+
+            # Homework
+
+    def raise_exception_task(self):
+
+        try:
+            first_value = str(input("Enter your name: "))
+            file = open("homework.txt", "w")
+            file.write(first_value)
+
+
+            with open("homework.txt", "w+") as file:
+                self.text_storage = file.read()
+                file = open("homework2.txt", "w")
+                file.write(self.text_storage)
+
+            if len(first_value) == 0:
+                raise Exception
+        except Exception:
+            print("We do not accept empty names!!")
+        else:
+            print("Thank you for entering your name")
+
+
+        #     if(len(first_value)) == 0:
+        #         raise Exception # You are throwing an Exception which Python might not have
+        # except Exception:
+        #     print("We do not accept empty names!!")
+        # else:
+        #     print("Thank you for enetering your name", first_value)
