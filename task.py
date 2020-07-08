@@ -7,28 +7,34 @@ class Homework:
     # Creating the class
     def raise_exception_task(self):
         # Start of our Errors and Exceptions code
-        try:
-            # Asking a input from the user
-            first_value = str(input("Enter your name: "))
+        #while True:
+            try:
+                # Asking a input from the user
+                first_value = str(input("Enter your name: "))
 
-            # Creating a file called homework to write in
-            file = open("homework.txt", "w")
-            # Writing the user input into the file
-            file.write(first_value)
+                # Creating a file called homework to write in
+                file = open("homework.txt", "w")
+                # Writing the user input into the file
+                file.write(first_value)
 
-            # Opening the homework.txt file just created. using w+ to read and write.
-            with open("homework.txt", "w+") as file:
-                self.text_storage = file.read()
-                file = open("homework2.txt", "w")
-                file.write(self.text_storage)
+                # Opening the homework.txt file just created. using w+ to read and write.
+                with open("homework.txt", "w+") as file:
+                    self.text_storage = file.read()
+                    file = open("homework2.txt", "w")
+                    file.write(self.text_storage)
 
-            if len(first_value) == 0:
-                raise Exception
-        except Exception:
-            print("We do not accept empty names!!")
-        else:
-            print("Thank you for entering your name")
+                if len(first_value) == 0:
+                    raise Exception
+            except Exception:
+                print("We do not accept empty names!!")
+            else:
+                print("Thank you for entering your name")
 
+    def image_file_read(self):
+        with open("baby.jpg", "rb") as image, open("baby2.jpg", "wb") as image2:
+            pic = image.read()
+            image2.write()
+            Image
 file_path="homework.txt"
 
 textfileobject = Homework(file_path)
