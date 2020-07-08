@@ -22,7 +22,7 @@ class Homework:
                     self.text_storage = file.read()
                     file = open("homework2.txt", "w")
                     file.write(self.text_storage)
-
+                # Checking the length of the input if 0 raise Exception
                 if len(first_value) == 0:
                     raise Exception
             except Exception:
@@ -30,11 +30,7 @@ class Homework:
             else:
                 print("Thank you for entering your name")
 
-    def image_file_read(self):
-        with open("baby.jpg", "rb") as image, open("baby2.jpg", "wb") as image2:
-            pic = image.read()
-            image2.write()
-            Image
+
 file_path="homework.txt"
 
 textfileobject = Homework(file_path)
